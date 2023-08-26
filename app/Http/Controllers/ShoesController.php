@@ -26,7 +26,7 @@ class ShoesController extends Controller
         return response()->json([
             'shoes' => $shoes,
             'status' => 200,
-            'message' => 'Shoes '.$shoes->id
+            'message' => 'Shoes ' . $shoes->id
         ]);
     }
     public function add(Request $request)
@@ -48,5 +48,10 @@ class ShoesController extends Controller
                 'Message' => 'Added Failled'
             ]);
         }
+    }
+    public function add_cart(Request $request)
+    {
+        $shoes = Shoes::find($request->id);
+        return response()->json(['action' => 'add']);
     }
 }

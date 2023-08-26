@@ -16,4 +16,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::prefix('/')->group(function(){
     Route::get('/',[ShoesController::class,'index']);
+    Route::get('/add/cart',[ShoesController::class,'add_cart']);
 });
