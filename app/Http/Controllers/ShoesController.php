@@ -26,7 +26,7 @@ class ShoesController extends Controller
         return response()->json([
             'shoes' => $shoes,
             'status' => 200,
-            'message' => 'Success'
+            'message' => 'Shoes '.$shoes->id
         ]);
     }
     public function add(Request $request)
